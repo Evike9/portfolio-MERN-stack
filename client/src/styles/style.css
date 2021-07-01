@@ -11,46 +11,47 @@
 }
 
 .nav-link {
-  margin-left: 50vw;
   display: flex;
   flex-direction: row;
-  padding-right: 30px;
+  margin-left: 35rem;
 }
 
 .link {
   color: white;
-  background-color: rgb(89, 52, 241);
-  border-color: rgb(103, 24, 239);
-  font-weight: bold;
-  box-shadow: 0 0 10px rgba(197, 177, 237, 0.744);
-  height: 30px;
+  background-color: rgb(103, 24, 239);
+  border-color: rgb(102, 81, 138);
+  box-shadow: 0 0 13px rgba(214, 196, 251, 0.744);
   text-decoration: none;
-  margin: 50px;
-  margin-right: 90px;
-  display: flex;
-  align-items: center;
   font-weight: normal;
-  padding: 9px;
-  border-radius: 7px;
+  border-radius: 18px;
+  width: 9rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
 }
 
 .link:hover {
   color: rgb(103, 24, 239);
   background-color: white;
+  border-color: solid 6px white;
 }
 
-.logo {
+.NavBar .logo {
   color: white;
-  margin-left: 5vw;
-  width: 70%;
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2.5rem;
 }
 
-.logo-title {
+h3 {
   color: white;
-  width: 10rem;
-  padding-left: 2rem;
-  font-size: 20px;
-  text-decoration: none;
+  text-align: center;
+  font-size: 3rem;
+  margin-left: 2rem;
 }
 
 /* HOME STYLING */
@@ -60,24 +61,36 @@
   flex-direction: row;
   border-radius: 1%;
   box-shadow: 0 0 15px rgba(197, 177, 237, 0.744);
-  width: 50rem;
-  height: 30rem;
-  margin: 20px;
+  width: 60rem;
+  height: 35rem;
+  margin: 4rem 12rem;
   align-items: center;
-  padding: 5rem;
+  /* padding: 35px; */
 }
+
 .avatar-image {
+  display: flex;
+  justify-content: center;
   width: 25rem;
   height: 20rem;
-  margin-left: 3rem;
+  margin-left: 2rem;
   display: flex;
   flex-direction: column;
+  border-radius: 30px;
 }
 
 .skills {
   display: flex;
   flex-direction: column;
-  margin-left: 8rem;
+  margin: 1rem 2rem 5rem;
+  font-size: 1rem;
+  align-items: center;
+  color: rgb(113, 36, 186);
+}
+
+.skills > h2 {
+  font-size: 1.3rem;
+  margin: 0rem 2rem 2rem;
 }
 
 /* Styling FORMS THE CREATE & EDIT FORMS */
@@ -87,17 +100,17 @@ h1 {
   display: flex;
   justify-content: center;
   font-size: 2.5vw;
-  margin: 0px 10px 20px;
   font-weight: bold;
 }
 
-.image-project input {
+.project-image {
+  /*ON THE UPDATE FORM*/
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: rgb(103, 24, 239);
-  width: 260px;
+  width: 10px;
+  padding: 2px 40px 10px;
 }
 
 .form {
@@ -107,6 +120,7 @@ h1 {
   align-items: center;
   font-weight: bold;
   background: rgb(252, 251, 253);
+  margin: 20px 80px;
   padding: 30px;
 }
 
@@ -116,10 +130,11 @@ h1 {
   flex-direction: column;
   justify-content: flex-start;
   box-shadow: 0 8px 17px 0 rgba(197, 177, 237, 0.744);
-  background-color: rgba(224, 219, 244, 0.839);
+  background-color: rgba(223, 217, 247, 0.839);
   width: 300px;
-  margin: 25px auto;
+  margin: 16px;
   overflow-y: auto;
+  border-radius: 2px;
 }
 
 .form-label {
@@ -128,8 +143,9 @@ h1 {
   justify-content: center;
   color: rgb(103, 24, 239);
   border: solid 1px rgb(103, 24, 239);
-  box-shadow: 0 0 9px rgba(197, 177, 237, 0.744);
+  box-shadow: 0 0 19px rgba(154, 122, 218, 0.744);
   height: 30px;
+  align-items: center;
 }
 
 select {
@@ -142,9 +158,10 @@ select {
   border-color: rgb(103, 24, 239);
   margin-top: 8px;
   font-weight: bold;
-  box-shadow: 0 0 11px rgba(197, 177, 237, 0.744);
-  width: 80px;
-  height: 40px;
+  box-shadow: 0 0 18px rgba(147, 105, 231, 0.744);
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 18px;
 }
 
 .btn:hover {
@@ -153,15 +170,16 @@ select {
 }
 
 .image-project > button {
-  color: white;
+  color: rgb(129, 29, 29);
   background-color: rgb(89, 52, 241);
   border-color: rgb(103, 24, 239);
   margin-top: 8px;
   font-weight: bold;
-  box-shadow: 0 0 15px rgba(197, 177, 237, 0.744);
+  box-shadow: 0 0 20px rgba(197, 177, 237, 0.744);
   width: 60px;
   height: 30px;
   font-size: small;
+  overflow-y: auto;
 }
 
 .image-project > button:hover {
@@ -170,13 +188,13 @@ select {
   box-shadow: 0 0 11px rgba(197, 177, 237, 0.744);
 }
 
-/* PROJECTS DISPLAY STYLING*/
+/* PROJECTS DISPLAY STYLING */
 
 .projects-container {
-  margin: 6px 4px;
+  /* margin: 6px 4px; */
   display: grid;
-  grid-gap: 20px;
-  grid-template-columns: fit-content(150%);
+  /* grid-gap: 5px; */
+  grid-template-columns: fit-content(100%);
   grid-template-columns: repeat(2, 700px);
   grid-template-rows: repeat(2, 700px);
 }
@@ -188,32 +206,73 @@ select {
   justify-content: center;
   color: rgb(125, 56, 244);
   align-items: center;
-  margin: 80px;
+  margin: 30px;
   border-radius: 1%;
   box-shadow: 0 0 15px rgba(197, 177, 237, 0.744);
 }
 
 .projects-img {
-  width: 50%;
-  height: 50%;
+  width: 65%;
+  height: 65%;
+  border-radius: 2%;
 }
 
 .project-details p {
+  display: flex;
+  justify-content: center;
   text-align: center;
-  margin: 4px;
+  margin: 3px;
   font-size: 1vw;
+  align-items: center;
 }
 
 h2 {
   color: rgb(103, 24, 239);
-  font-size: 2vw;
+  /* font-size: 2vw; */
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
 }
 
 .btn-update {
-  width: 15%;
+  display: flex;
+  flex-direction: column;
   color: white;
   background-color: rgb(89, 52, 241);
-  border-color: rgb(103, 24, 239);
+  box-shadow: 0 0 10px rgba(147, 105, 231, 0.744);
+  font-size: 10px;
+  font-weight: bolder;
+  padding: 3px 8px;
+  border-radius: 15px;
   text-decoration: none;
+  /* margin-bottom: 20px; */
+}
+
+.btn-update:hover {
+  color: rgb(103, 24, 239);
+  border: solid 1px rgb(103, 24, 239);
+  background-color: white;
+  box-shadow: 0 0 11px rgba(197, 177, 237, 0.744);
+}
+
+.btn-delete {
+  display: flex;
+  flex-direction: column;
+  color: rgb(89, 52, 241);
+  background-color: rgb(189, 175, 245);
+  border: solid 1px rgb(103, 24, 239);
+  /* margin-bottom: 20px; */
+  box-shadow: 0 0 18px rgba(147, 105, 231, 0.744);
+  font-size: 10px;
+  border-radius: 15px;
+}
+
+.btn-delete:hover{
+  background-color: rgb(200, 4, 4);
+  color: white;
 }

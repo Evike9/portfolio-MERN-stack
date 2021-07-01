@@ -43,12 +43,12 @@ router.post("/", fileUploader.single("picture"), (req, res, next) => {
 // UPDATE UN PROJET PAR SON ID
 
 router.patch("/:id", (req, res, next) => {
-  console.log(req.body);
+  console.log("je suis le req.body",req.body);
   const project = { ...req.body };
   
   ProjectsModel.findByIdAndUpdate(req.params.id, project, { new: true })
     .then((updatedProject) => {
-      console.log(updatedProject)
+      // console.log(updatedProject)
       return res.status(200).json(updatedProject);
     })
     .catch(next);

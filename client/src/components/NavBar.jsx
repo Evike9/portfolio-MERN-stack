@@ -8,10 +8,12 @@ const NavBar = (props) => {
     <nav className="NavBar">
       <NavLink exact to="/">
         <img src={logo} alt="logo" className="logo" />
-        {/* <div className="logo-title">
-        evi:ke portfolio 
-        </div> */}
-      </NavLink>
+        </NavLink>
+      <div>
+      <h3>evi:ke</h3>
+      </div>
+      
+
       <div className="nav-link">
         <NavLink className="link" to="/projects">
           PROJECTS

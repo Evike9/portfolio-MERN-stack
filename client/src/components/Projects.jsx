@@ -17,22 +17,15 @@ class myProjects extends Component {
       });
   }
 
-
-handleDelete = (id) => {
+  handleDelete = (id) => {
     console.log("hello fucker", id);
 
-
-apiHandler
-.deleteProject(id)
-.then(() => {
-  this.setState({
-    projects: this.state.projects.filter(project => project._id !== id
-    )
-    })
-});
-
-}
-
+    apiHandler.deleteProject(id).then(() => {
+      this.setState({
+        projects: this.state.projects.filter((project) => project._id !== id),
+      });
+    });
+  };
 
   render() {
     return (
@@ -41,23 +34,35 @@ apiHandler
         <div className="projects-container">
           {this.state.projects.map((project) => (
             <div className="projects-card" key={project._id}>
-              
               <img
                 className="projects-img"
                 src={project.picture}
                 alt={project.title}
               />
-              
+
               <div className="project-details">
-              <h2>{project.title}</h2>
+                <h2>{project.title}</h2>
                 <p>Description: {project.description}</p>
                 <p>Type: {project.type}</p>
                 <p>Tool: {project.tool}</p>
               </div>
-              <button type="submit" className="btn-update">
-                <Link to={`projects/update/${project._id}`}>Update</Link>
-              </button>
-              <button onClick={() => this.handleDelete(project._id)}>DELETE</button>
+
+              <div className="buttons">
+                <Link
+                  to={`projects/update/${project._id}`}
+                  className="btn-update"
+                >
+                  UPDATE
+                </Link>
+              </div>
+              <div>
+                <button
+                  onClick={() => this.handleDelete(project._id)}
+                  className="btn-delete"
+                >
+                  DELETE
+                </button>
+              </div>
             </div>
           ))}
         </div>

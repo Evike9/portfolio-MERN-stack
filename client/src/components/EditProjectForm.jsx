@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import apiHandler from "../api/apiHandler";
 import "../styles/style.css";
+// import { Link } from "react-router-dom";
 
 const initialState = {
   picture: "",
@@ -16,7 +17,6 @@ class EditProjectForm extends Component {
     this.state = { ...initialState };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    // this.updateRef = React.createRef();
   }
 
   // fileSelectedHandler = (event) => {
@@ -45,28 +45,30 @@ class EditProjectForm extends Component {
   handleChange = (event) => {
     const value = event.target.value;
     const key = event.target.name;
-    this.setState({ [key]: value});
+    this.setState({ [key]: value });
   };
 
   handleSubmit = (event) => {
     event.preventDefault();
 
-    
     apiHandler
-      .updateProject(this.props.match.params.id, {title: this.state.title, description: this.state.description, type: this.state.type, tool: this.state.tool}) // formData use only to updload files 
+      .updateProject(this.props.match.params.id, {
+        title: this.state.title,
+        description: this.state.description,
+        type: this.state.type,
+        tool: this.state.tool,
+      }) // formData use only to updload files
       .then((data) => {
         console.log(data);
         this.props.history.push("/projects"); // ("/projects/{Id}")
-        this.setState() 
+        this.setState();
       })
       .catch((error) => {
         console.log(error);
       });
   };
 
-
-
-  // soit j'envoi un object js  -> object avec state va directement au BackEND 
+  // soit j'envoi un object js  -> object avec state va directement au BackEND
 
   render() {
     console.log(this.state.picture);
@@ -74,6 +76,14 @@ class EditProjectForm extends Component {
       <section className="form-section">
         <form className="form" onSubmit={this.handleSubmit}>
           <h1 className="form-title">Update your project</h1>
+
+          <div className="project-image">
+            <img
+              src={this.state.picture}
+              alt={this.state.title}
+              style={{ width: "100px", height: "100px" }}
+            />
+          </div>
 
           <div className="form-container">
             <label className="form-label" htmlFor="title">
@@ -86,12 +96,6 @@ class EditProjectForm extends Component {
               placeholder="Type your creation's title"
               onChange={this.handleChange}
             />
-          </div>
-
-          <div className="image-project">
- 
-            <img src={this.state.picture} alt={this.state.title} />
-            
           </div>
 
           <div className="form-container">
@@ -138,7 +142,11 @@ class EditProjectForm extends Component {
           </div>
 
           <button type="submit" className="btn">
+            {/* <Link
+                  to={`projects/${project.id}`}
+                  > */}
             Submit
+            {/* </Link> */}
           </button>
         </form>
       </section>

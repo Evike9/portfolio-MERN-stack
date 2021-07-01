@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import apiHandler from "../api/apiHandler";
 import "../styles/style.css";
+// import { Link } from "react-router-dom";
 
 const initialState = {
   picture: "",
@@ -58,7 +59,7 @@ class CreateProjectForm extends Component {
       <section className="form-section">
         <form className="form" onSubmit={this.handleSubmit}>
           <h1 className="form-title">Add your new project</h1>
-          <div className="image-project">
+          <div className="image-project-uploader">
             <input
               type="file"
               name="picture"
@@ -116,14 +117,19 @@ class CreateProjectForm extends Component {
               onChange={this.handleChange}
               value={this.state.tool}
             >
-              <option value="Blender">Blender</option>
-              <option value="Photoshop">Photoshop</option>
-              <option value="Illustrator">Illustrator</option>
+              <option value="Blender">Blender 3D</option>
+              <option value="Photoshop">Adobe Photoshop CC</option>
+              <option value="Illustrator">Adobe Illustrator CC</option>
             </select>
           </div>
 
           <button type="submit" className="btn">
-            Submit
+          {/* <Link
+                  to={"/projects"} */}
+      
+                {/* > */}
+                  {/* </Link>  */}
+            SUBMIT
           </button>
         </form>
       </section>
