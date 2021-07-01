@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
-
 import "../styles/style.css";
 import { Link } from "react-router-dom";
+import apiHandler from "../api/apiHandler";
 
 class myProjects extends Component {
   state = {
@@ -16,6 +16,23 @@ class myProjects extends Component {
         this.setState({ projects: response.data });
       });
   }
+
+
+handleDelete = (id) => {
+    console.log("hello fucker", id);
+
+
+apiHandler
+.deleteProject(id)
+.then(() => {
+  this.setState({
+    projects: this.state.projects.filter(project => project._id !== id
+    )
+    })
+});
+
+}
+
 
   render() {
     return (
@@ -40,6 +57,7 @@ class myProjects extends Component {
               <button type="submit" className="btn-update">
                 <Link to={`projects/update/${project._id}`}>Update</Link>
               </button>
+              <button onClick={() => this.handleDelete(project._id)}>DELETE</button>
             </div>
           ))}
         </div>

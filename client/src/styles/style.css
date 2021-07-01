@@ -1,200 +1,219 @@
 /* Styling the NAV BAR */
 
 .NavBar {
-    background-color: rgb(103, 24, 239);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 20px;
-    height: 60px;
-    position: relative;
-  }
-  
-  .nav-link{
-    margin-left: 50vw;
-    display: flex;
-    flex-direction: row;
-    padding-right: 30px; 
-  }
-  
-  .link{
-    color: white;
-    background-color: rgb(89, 52, 241);
-    border-color: rgb(103, 24, 239);
-    font-weight: bold;
-    box-shadow: 0 0 13px rgba(197, 177, 237, 0.744);
-    height: 30px;
-    text-decoration: none;
-    margin:50px;
-    margin-right: 90px;
-    display:flex;
-    align-items: center;
-    font-weight:normal;
-    padding: 18px;
-    border-radius: 20px;
-  }
-  
-  .link:hover{
-    color:rgb(103, 24, 239);
-    background-color: white;
-  }
-  
-  
-  .logo {
-    color: white;
-    margin-left: 5vw;
-  }
-  
-  /* Styling FORMS THE CREATE & EDIT FORMS */
-  
-  h1 {
-    color: rgb(103, 24, 239);
-    display: flex;
-    justify-content: center;
-    font-size: 2.5vw;
-    margin: 0px 10px 20px;
-    font-weight: bold;
-  }
-  
-  .image-project input {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: rgb(103, 24, 239);
-    width: 260px;
-  }
-  
-  .form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    background: rgb(252, 251, 253);
-    padding: 30px;
-  }
-  
-  .form-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    box-shadow: 0 8px 17px 0 rgba(197, 177, 237, 0.744);
-    background-color: rgba(224, 219, 244, 0.839);
-    width: 300px;
-    margin: 25px auto;
-    overflow-y: auto;
-  }
-  
-  .form-label {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    color: rgb(103, 24, 239);
-    border: solid 1px rgb(103, 24, 239);
-    box-shadow: 0 0 9px rgba(197, 177, 237, 0.744);
-    height: 30px;
-  }
-  
-  select{
-    color: rgb(103, 24, 239);
-  }
-  
-  .btn  {
-    color: white;
-    background-color: rgb(89, 52, 241);
-    border-color: rgb(103, 24, 239);
-    margin-top: 8px;
-    font-weight: bold;
-    box-shadow: 0 0 11px rgba(197, 177, 237, 0.744);
-    width: 80px;
-    height: 40px;
-  }
-  
-  .btn:hover{
-    color:rgb(103, 24, 239);
-    background-color: white;
-  }
-  
-  .image-project > button {
-    color: white;
-    background-color: rgb(89, 52, 241);
-    border-color: rgb(103, 24, 239);
-    margin-top: 8px;
-    font-weight: bold;
-    box-shadow: 0 0 15px rgba(197, 177, 237, 0.744);
-    width: 60px;
-    height: 30px;
-    font-size: small;
-  }
-  
-  .image-project > button:hover{
-    color:rgb(103, 24, 239);
-    background-color: white;
-    box-shadow: 0 0 11px rgba(197, 177, 237, 0.744);
-  }
-  
-  
-  /* PROJECTS DISPLAY STYLING*/
-  
-  
-  .projects-container{
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-shadow: 0 0 6px rgb(103, 24, 239);
-    border-radius: 2%;
-    background-color: white;
-    width: 450px;
-    max-height: 80vh; */
-    margin: 6px 4px;
-    display: grid;
-    /* grid-template-columns:  400px 400px ; */
-    grid-gap: 20px;
-    /* grid-template-columns: repeat(auto-fill, 1000px) 1000px; */
-    grid-template-columns: fit-content(150%);
-    grid-template-columns: repeat(2, 700px);
-    grid-template-rows: repeat(2, 700px);
-    background-color: blue;
-  
-  }
-  
-  .projects-card {
-    
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: rgb(125, 56, 244);
-    align-items: center;
-    margin: 80px;
-    border-radius: 2%;
-    background-color:red;
-    
-  }
-  
-  .projects-img{
-    width:50%;
-    height:50%;
-  }
-  
-  .project-details p{
-    text-align: center;
-    margin: 4px;
-    font-size: 1vw;
-  }
-  
-  h2 {
-    color: rgb(103, 24, 239);
-    font-size: 2vw;
-    font-weight: bold;
-  }
-  
-  .btn-update {
-    width: 15%;
-    color: white;
-    background-color: rgb(89, 52, 241);
-    border-color: rgb(103, 24, 239);
-    text-decoration: none; 
-  }
+  background-color: rgb(103, 24, 239);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  height: 40px;
+  position: relative;
+}
+
+.nav-link {
+  margin-left: 50vw;
+  display: flex;
+  flex-direction: row;
+  padding-right: 30px;
+}
+
+.link {
+  color: white;
+  background-color: rgb(89, 52, 241);
+  border-color: rgb(103, 24, 239);
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(197, 177, 237, 0.744);
+  height: 30px;
+  text-decoration: none;
+  margin: 50px;
+  margin-right: 90px;
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  padding: 9px;
+  border-radius: 7px;
+}
+
+.link:hover {
+  color: rgb(103, 24, 239);
+  background-color: white;
+}
+
+.logo {
+  color: white;
+  margin-left: 5vw;
+  width: 70%;
+}
+
+.logo-title {
+  color: white;
+  width: 10rem;
+  padding-left: 2rem;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* HOME STYLING */
+
+.avatar-card {
+  display: flex;
+  flex-direction: row;
+  border-radius: 1%;
+  box-shadow: 0 0 15px rgba(197, 177, 237, 0.744);
+  width: 50rem;
+  height: 30rem;
+  margin: 20px;
+  align-items: center;
+  padding: 5rem;
+}
+.avatar-image {
+  width: 25rem;
+  height: 20rem;
+  margin-left: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8rem;
+}
+
+/* Styling FORMS THE CREATE & EDIT FORMS */
+
+h1 {
+  color: rgb(103, 24, 239);
+  display: flex;
+  justify-content: center;
+  font-size: 2.5vw;
+  margin: 0px 10px 20px;
+  font-weight: bold;
+}
+
+.image-project input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(103, 24, 239);
+  width: 260px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  background: rgb(252, 251, 253);
+  padding: 30px;
+}
+
+.form-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 0 8px 17px 0 rgba(197, 177, 237, 0.744);
+  background-color: rgba(224, 219, 244, 0.839);
+  width: 300px;
+  margin: 25px auto;
+  overflow-y: auto;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: rgb(103, 24, 239);
+  border: solid 1px rgb(103, 24, 239);
+  box-shadow: 0 0 9px rgba(197, 177, 237, 0.744);
+  height: 30px;
+}
+
+select {
+  color: rgb(103, 24, 239);
+}
+
+.btn {
+  color: white;
+  background-color: rgb(89, 52, 241);
+  border-color: rgb(103, 24, 239);
+  margin-top: 8px;
+  font-weight: bold;
+  box-shadow: 0 0 11px rgba(197, 177, 237, 0.744);
+  width: 80px;
+  height: 40px;
+}
+
+.btn:hover {
+  color: rgb(103, 24, 239);
+  background-color: white;
+}
+
+.image-project > button {
+  color: white;
+  background-color: rgb(89, 52, 241);
+  border-color: rgb(103, 24, 239);
+  margin-top: 8px;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(197, 177, 237, 0.744);
+  width: 60px;
+  height: 30px;
+  font-size: small;
+}
+
+.image-project > button:hover {
+  color: rgb(103, 24, 239);
+  background-color: white;
+  box-shadow: 0 0 11px rgba(197, 177, 237, 0.744);
+}
+
+/* PROJECTS DISPLAY STYLING*/
+
+.projects-container {
+  margin: 6px 4px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: fit-content(150%);
+  grid-template-columns: repeat(2, 700px);
+  grid-template-rows: repeat(2, 700px);
+}
+
+.projects-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgb(125, 56, 244);
+  align-items: center;
+  margin: 80px;
+  border-radius: 1%;
+  box-shadow: 0 0 15px rgba(197, 177, 237, 0.744);
+}
+
+.projects-img {
+  width: 50%;
+  height: 50%;
+}
+
+.project-details p {
+  text-align: center;
+  margin: 4px;
+  font-size: 1vw;
+}
+
+h2 {
+  color: rgb(103, 24, 239);
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.btn-update {
+  width: 15%;
+  color: white;
+  background-color: rgb(89, 52, 241);
+  border-color: rgb(103, 24, 239);
+  text-decoration: none;
+}

@@ -1,14 +1,16 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-// import logo from "../../public/images/logo"; FAILED TO COMPILED!!!
-
+import logo from "../assets/logo.png";
 import "../styles/style.css";
 
 const NavBar = (props) => {
   return (
     <nav className="NavBar">
       <NavLink exact to="/">
-        <img src="/logo" alt="logo" />
+        <img src={logo} alt="logo" className="logo" />
+        {/* <div className="logo-title">
+        evi:ke portfolio 
+        </div> */}
       </NavLink>
       <div className="nav-link">
         <NavLink className="link" to="/projects">

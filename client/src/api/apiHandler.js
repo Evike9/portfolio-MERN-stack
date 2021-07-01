@@ -18,21 +18,21 @@ const apiHandler = {
 
   createProject(data) {
     return service
-      .post("/projects", data)
+      .post("/projects", data)  // params
       .then((res) => res.data)
       .catch(errorHandler);
   },
 
   getProjects() {
     return service
-      .get("/projects")
+      .get("/projects")    // body
       .then((res) => res.data)
       .catch(errorHandler);
   },
 
   getProject(projectId){
     return service
-    .get(`/projects/${projectId}`)
+    .get(`/projects/${projectId}`)  // body
     .then((res) => res.data)
     .catch(errorHandler);
   },
@@ -41,14 +41,14 @@ const apiHandler = {
 
   updateProject(projectId, data) {
     return service
-      .patch(`/projects/${projectId}`, data)
+      .patch(`/projects/${projectId}`, data) // body
       .then((res) => res.data)
       .catch(errorHandler);
   },
 
   deleteProject(projectId) {
     return service
-      .delete(`/projects/${projectId}`)
+      .delete(`/projects/${projectId}`) // params
       .then((res) => res.data)
       .catch(errorHandler);
   },

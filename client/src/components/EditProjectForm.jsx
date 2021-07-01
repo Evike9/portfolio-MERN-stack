@@ -16,12 +16,12 @@ class EditProjectForm extends Component {
     this.state = { ...initialState };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.updateRef = React.createRef();
+    // this.updateRef = React.createRef();
   }
 
-  fileSelectedHandler = (event) => {
-    this.setState({ ...this.state, picture: event.target.files[0] });
-  };
+  // fileSelectedHandler = (event) => {
+  //   this.setState({ ...this.state, picture: event.target.files[0] });
+  // };
 
   componentDidMount() {
     apiHandler
@@ -30,7 +30,7 @@ class EditProjectForm extends Component {
         console.log(data);
         this.setState({
           id: data._id,
-          picture: data.pictures,
+          picture: data.picture,
           title: data.title,
           description: data.description,
           type: data.type,
@@ -45,34 +45,31 @@ class EditProjectForm extends Component {
   handleChange = (event) => {
     const value = event.target.value;
     const key = event.target.name;
-    this.setState({ [key]: value, picture: event.target.picture });
+    this.setState({ [key]: value});
   };
 
   handleSubmit = (event) => {
     event.preventDefault();
 
-    const formData = new FormData();
-    formData.append("id", this.state.id);
-    formData.append("picture", this.state.picture);
-    formData.append("title", this.state.title);
-    formData.append("type", this.state.type);
-    formData.append("description", this.state.description);
-    formData.append("tool", this.state.tool);
-
-    console.log(formData);
-
+    
     apiHandler
-      .updateProject(this.props.match.params.id, formData)
+      .updateProject(this.props.match.params.id, {title: this.state.title, description: this.state.description, type: this.state.type, tool: this.state.tool}) // formData use only to updload files 
       .then((data) => {
         console.log(data);
-        this.props.history.push("/projects");
+        this.props.history.push("/projects"); // ("/projects/{Id}")
+        this.setState() 
       })
       .catch((error) => {
         console.log(error);
       });
   };
 
+
+
+  // soit j'envoi un object js  -> object avec state va directement au BackEND 
+
   render() {
+    console.log(this.state.picture);
     return (
       <section className="form-section">
         <form className="form" onSubmit={this.handleSubmit}>
@@ -92,12 +89,9 @@ class EditProjectForm extends Component {
           </div>
 
           <div className="image-project">
-          <input
-              type="file"
-              name="picture"
-              onChange={this.fileSelectedHandler}
-            />
+ 
             <img src={this.state.picture} alt={this.state.title} />
+            
           </div>
 
           <div className="form-container">
@@ -147,7 +141,6 @@ class EditProjectForm extends Component {
             Submit
           </button>
         </form>
-
       </section>
     );
   }

@@ -34,7 +34,7 @@ class CreateProjectForm extends Component {
     const formData = new FormData();
 
     formData.append("picture", this.state.picture);
-
+    // formData is only use when file need to be uploaded >> fileSelectedHandler
     // Object.keys(this.state).forEach(key=> formData.append(key, this.state[key]));
     formData.append("title", this.state.title);
     formData.append("type", this.state.type);
@@ -57,7 +57,7 @@ class CreateProjectForm extends Component {
     return (
       <section className="form-section">
         <form className="form" onSubmit={this.handleSubmit}>
-          <h1 className="form-title">Add your project</h1>
+          <h1 className="form-title">Add your new project</h1>
           <div className="image-project">
             <input
               type="file"

@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import Projects from "./components/Projects";
 import CreateProjectForm from "./components/CreateProjectForm";
 import EditProjectForm from "./components/EditProjectForm";
+import Home from "./views/Home";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       </div>
       <div className="main">
         <Switch>
+          <Route exact path="/" component={Home} />
           <Route exact path="/projects" component={Projects} />
           <Route exact path="/projects/create" component={CreateProjectForm} />
           <Route exact path="/projects/update/:id" component={EditProjectForm} />
