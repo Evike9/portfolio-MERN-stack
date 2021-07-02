@@ -9,7 +9,7 @@ const Home = () => {
           <img src={image} alt="img" />
         </div>
         <div className="skills">
-          <h2>WELCOME TO MY DESIGN PORTFOLIO</h2>
+          <h2>WELCOME TO MY PORTFOLIO</h2>
           <p>
             Hello, I am a junior Web Dev with <br></br>a Designer and Delivery Manager background.
             <br></br>My main skills are:
@@ -19,10 +19,11 @@ const Home = () => {
             <li>Blender 3D</li>
             <li>HTML5 and CSS3</li>
             <li>JavaScript</li>
+            <li>Team Management</li>
           </ul>
           <br></br>
           <p>Enjoy my designs and hire me!</p>
-          <p className="github">Go to my Github to check this MERN project's code :&nbsp;
+          <p className="github">Go to my Github to check out this MERN project's code :&nbsp;
         <a href="https://github.com/Evike9/portfolio-MERN-stack"><i class="fab fa-github"></i></a>
         </p>
         </div>

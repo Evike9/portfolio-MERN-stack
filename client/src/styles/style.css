@@ -36,8 +36,6 @@
   justify-content: center;
   align-items: center;
   margin: 50px;
-  /* -webkit-animation: blink-1 0.5s linear  both;
-  animation: blink-1 0.7s linear infinite both; */
 }
 
 .link:hover {
@@ -60,7 +58,7 @@
   text-align: center;
   font-size: 3rem;
   margin-left: 1rem;
-  margin-top: 3rem;
+  align-items: center;
 }
 
 /* HOME STYLING */
@@ -86,39 +84,46 @@
   display: flex;
   flex-direction: column;
   border-radius: 3px;
-  -webkit-animation: slide-in-left 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-left 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: slide-in-left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: slide-in-left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-.skills {
+.skills ul:only-child li{
   display: flex;
   flex-direction: column;
-  margin: 1rem 2rem 5rem;
+  margin: 1rem 2rem;
   font-size: 1rem;
   align-items: center;
   color: rgb(113, 36, 186);
   
 }
 
-.skills , h2 {
+.skills  {
+  align-items: center;
+  color: rgb(113, 36, 186);
   font-size: 1.2rem;
-  margin: 1rem 2rem 2rem;
+  margin: 2rem;
   -webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
   animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
-.github{
+h2 {
+  font-size: 1.2rem;
+}
+
+.github {
   font-size: 1rem;
 }
 
-.fa-github{
-color: rgb(147, 34, 252);
-font-size: 1.5rem;
+.fa-github {
+  color: rgb(147, 34, 252);
+  font-size: 1.5rem;
 }
 
-.fa-github:hover{
+.fa-github:hover {
   color: rgb(206, 6, 196);
-  }
+}
 
 /* Styling FORMS THE CREATE & EDIT FORMS */
 
@@ -129,8 +134,10 @@ h1 {
   font-size: 2.5vw;
   font-weight: normal;
   margin-bottom: 2rem;
-  -webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-  animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  -webkit-animation: tracking-in-expand-fwd 0.8s
+    cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.61, 0.355, 1)
+    both;
 }
 
 .project-image {
@@ -152,7 +159,6 @@ h1 {
   background: rgb(252, 251, 253);
   margin: 20px 80px;
   padding: 30px;
- 
 }
 
 .form-container {
@@ -167,8 +173,9 @@ h1 {
   overflow-y: auto;
   border-radius: 2px;
   color: darkviolet;
-  -webkit-animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: scale-in-ver-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: scale-in-ver-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .form-label {
@@ -226,9 +233,9 @@ select {
   grid-template-columns: repeat(2, 700px);
   grid-template-rows: repeat(2, 700px);
   grid-gap: 20px;
-  -webkit-animation: scale-in-ver-top 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  animation: scale-in-ver-top 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-
+  -webkit-animation: scale-in-ver-top 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: scale-in-ver-top 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .projects-card {
@@ -258,7 +265,8 @@ select {
   align-items: center;
 }
 
-h3 {   /*projects title on display*/
+h3 {
+  /*projects title on display*/
   color: rgb(103, 24, 239);
   /* font-size: 2vw;  */
   font-weight: bold;
@@ -267,7 +275,6 @@ h3 {   /*projects title on display*/
 }
 
 #buttons {
-  display: inline-block;
   align-items: center;
   margin: 7px;
 }
@@ -307,50 +314,47 @@ h3 {   /*projects title on display*/
   color: white;
 }
 
-
 /*FOOTER*/
 
-.footer{
+.footer {
   display: flex;
   justify-content: center;
   color: rgb(131, 108, 225);
 }
-
 
 /* avatar image animation*/
 
 @-webkit-keyframes slide-in-left {
   0% {
     -webkit-transform: translateX(-1000px);
-            transform: translateX(-1000px);
+    transform: translateX(-1000px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
 @keyframes slide-in-left {
   0% {
     -webkit-transform: translateX(-1000px);
-            transform: translateX(-1000px);
+    transform: translateX(-1000px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
-
 
 /*home anima card skills text*/
 @-webkit-keyframes tracking-in-expand-fwd {
   0% {
     letter-spacing: -0.5em;
     -webkit-transform: translateZ(-700px);
-            transform: translateZ(-700px);
+    transform: translateZ(-700px);
     opacity: 0;
   }
   40% {
@@ -358,7 +362,7 @@ h3 {   /*projects title on display*/
   }
   100% {
     -webkit-transform: translateZ(0);
-            transform: translateZ(0);
+    transform: translateZ(0);
     opacity: 1;
   }
 }
@@ -366,7 +370,7 @@ h3 {   /*projects title on display*/
   0% {
     letter-spacing: -0.5em;
     -webkit-transform: translateZ(-700px);
-            transform: translateZ(-700px);
+    transform: translateZ(-700px);
     opacity: 0;
   }
   40% {
@@ -374,37 +378,11 @@ h3 {   /*projects title on display*/
   }
   100% {
     -webkit-transform: translateZ(0);
-            transform: translateZ(0);
+    transform: translateZ(0);
     opacity: 1;
   }
 }
 
-
-
-/*Link buttons blink*/
-
-/* @-webkit-keyframes blink-1 {
-  0%,
-  10%,
-  100% {
-    opacity: 1;
-  }
-  25%,
-  75% {
-    opacity: 0;
-  }
-}
-@keyframes blink-1 {
-  0%,
-  10%,
-  90% {
-    opacity: 1;
-  }
-  25%,
-  75% {
-    opacity: 0;
-  }
-} */
 
 
 /*card project anima + update/create project forms*/
@@ -412,32 +390,32 @@ h3 {   /*projects title on display*/
 @-webkit-keyframes scale-in-ver-top {
   0% {
     -webkit-transform: scaleY(0);
-            transform: scaleY(0);
+    transform: scaleY(0);
     -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
     opacity: 1;
   }
   100% {
     -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+    transform: scaleY(1);
     -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
     opacity: 1;
   }
 }
 @keyframes scale-in-ver-top {
   0% {
     -webkit-transform: scaleY(0);
-            transform: scaleY(0);
+    transform: scaleY(0);
     -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
     opacity: 1;
   }
   100% {
     -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+    transform: scaleY(1);
     -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
     opacity: 1;
   }
 }
