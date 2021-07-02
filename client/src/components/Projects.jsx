@@ -40,14 +40,24 @@ class myProjects extends Component {
                 alt={project.title}
               />
 
+              {/* Regular space: &nbsp;
+Two spaces gap: &ensp;
+Four spaces gap: &emsp; */}
+
               <div className="project-details">
-                <h2>{project.title}</h2>
-                <p>Description: {project.description}</p>
-                <p>Type: {project.type}</p>
-                <p>Tool: {project.tool}</p>
+                <h3>{project.title}</h3>
+                <p>
+                  <b>Description:&ensp;</b> {project.description}
+                </p>
+                <p>
+                  <b>Type:&ensp;</b> {project.type}
+                </p>
+                <p>
+                  <b>Tool:&ensp;</b> {project.tool}
+                </p>
               </div>
 
-              <div className="buttons">
+              <div id="buttons">
                 <Link
                   to={`projects/update/${project._id}`}
                   className="btn-update"

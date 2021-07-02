@@ -104,7 +104,7 @@ class CreateProjectForm extends Component {
               <option value="3D">3D</option>
               <option value="2D">2D</option>
               <option value="DigitalPainting">Digital Painting</option>
-              <option value="vector">Vector</option>
+              <option value="Vector">Vector</option>
             </select>
           </div>
 
@@ -117,9 +117,9 @@ class CreateProjectForm extends Component {
               onChange={this.handleChange}
               value={this.state.tool}
             >
-              <option value="Blender">Blender 3D</option>
-              <option value="Photoshop">Adobe Photoshop CC</option>
-              <option value="Illustrator">Adobe Illustrator CC</option>
+              <option value="Blender 3D">Blender 3D</option>
+              <option value="Adobe Photoshop CC">Adobe Photoshop CC</option>
+              <option value="Abode Illustrator CC">Adobe Illustrator CC</option>
             </select>
           </div>
 

@@ -9,8 +9,8 @@ const NavBar = (props) => {
       <NavLink exact to="/">
         <img src={logo} alt="logo" className="logo" />
         </NavLink>
-      <div>
-      <h3>evi:ke</h3>
+      <div className="logo-title">
+      <h4>evi:ke</h4>
       </div>
       
 
