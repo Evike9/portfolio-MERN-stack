@@ -22,7 +22,11 @@ const Home = () => {
           </ul>
           <br></br>
           <p>Enjoy my designs and hire me!</p>
+          <p className="github">Go to my Github to check this MERN project's code :&nbsp;
+        <a href="https://github.com/Evike9/portfolio-MERN-stack"><i class="fab fa-github"></i></a>
+        </p>
         </div>
+
       </div>
       <footer>
       <p className="footer">

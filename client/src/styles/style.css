@@ -36,8 +36,8 @@
   justify-content: center;
   align-items: center;
   margin: 50px;
-  -webkit-animation: blink-1 0.5s linear  both;
-  /* animation: blink-1 0.7s linear infinite both; */
+  /* -webkit-animation: blink-1 0.5s linear  both;
+  animation: blink-1 0.7s linear infinite both; */
 }
 
 .link:hover {
@@ -102,10 +102,23 @@
 
 .skills , h2 {
   font-size: 1.2rem;
-  margin: 2rem 2rem 2rem;
+  margin: 1rem 2rem 2rem;
   -webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
   animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
+
+.github{
+  font-size: 1rem;
+}
+
+.fa-github{
+color: rgb(147, 34, 252);
+font-size: 1.5rem;
+}
+
+.fa-github:hover{
+  color: rgb(206, 6, 196);
+  }
 
 /* Styling FORMS THE CREATE & EDIT FORMS */
 
@@ -214,6 +227,7 @@ select {
   grid-template-rows: repeat(2, 700px);
   grid-gap: 20px;
   -webkit-animation: scale-in-ver-top 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: scale-in-ver-top 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
 }
 
@@ -303,7 +317,7 @@ h3 {   /*projects title on display*/
 }
 
 
-/* avatar image anima*/
+/* avatar image animation*/
 
 @-webkit-keyframes slide-in-left {
   0% {
@@ -369,7 +383,7 @@ h3 {   /*projects title on display*/
 
 /*Link buttons blink*/
 
-@-webkit-keyframes blink-1 {
+/* @-webkit-keyframes blink-1 {
   0%,
   10%,
   100% {
@@ -390,7 +404,7 @@ h3 {   /*projects title on display*/
   75% {
     opacity: 0;
   }
-}
+} */
 
 
 /*card project anima + update/create project forms*/
