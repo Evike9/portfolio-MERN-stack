@@ -30,7 +30,6 @@ class myProjects extends Component {
   render() {
     return (
       <div className="projects">
-        {/* <h1>PROJECTS</h1> */}
         <div className="projects-container">
           {this.state.projects.map((project) => (
             <div className="projects-card" key={project._id}>
@@ -39,10 +38,6 @@ class myProjects extends Component {
                 src={project.picture}
                 alt={project.title}
               />
-
-              {/* Regular space: &nbsp;
-Two spaces gap: &ensp;
-Four spaces gap: &emsp; */}
 
               <div className="project-details">
                 <h3>{project.title}</h3>

@@ -1,7 +1,7 @@
 require("dotenv").config();
 require("./config/dbConnection");
 
-const createError = require('http-errors'); 
+const createError = require("http-errors");
 const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
@@ -36,10 +36,10 @@ app.use(function (req, res, next) {
 
 // error handler
 app.use(function (err, req, res, next) {
-// set locals, only providing error in development
+  // set locals, only providing error in development
 
-// render the error page
-  res.status(err.status || 500); // updated 
+  // render the error page
+  res.status(err.status || 500); // updated
   console.log(err);
   res.json(err);
 });

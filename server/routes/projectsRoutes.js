@@ -3,7 +3,7 @@ const router = express.Router();
 const ProjectsModel = require("../Models/projectsModel");
 const fileUploader = require("../config/cloudinary.config");
 
-// DASHBOARD DISPLAY LES PROJETS
+// DASHBOARD DISPLAYING PROJECTS
 
 router.get("/", (req, res, next) => {
   ProjectsModel.find()
@@ -13,7 +13,7 @@ router.get("/", (req, res, next) => {
     .catch(next);
 });
 
-// DISPLAY UN PROJECT SELECTIONNÉ PAR SON ID
+// DISPLAY A PROJECT SELECTED BY HIS ID
 
 router.get("/:id", (req, res, next) => {
   ProjectsModel.findById(req.params.id)
@@ -23,7 +23,7 @@ router.get("/:id", (req, res, next) => {
     .catch(next);
 });
 
-// CREER UN NOUVEAU PROJET
+// CREATE A NEW PROJECT
 
 router.post("/", fileUploader.single("picture"), (req, res, next) => {
   console.log(req.body);
@@ -40,12 +40,12 @@ router.post("/", fileUploader.single("picture"), (req, res, next) => {
     .catch(next);
 });
 
-// UPDATE UN PROJET PAR SON ID
+// UPDATE A PROJECT
 
 router.patch("/:id", (req, res, next) => {
-  console.log("je suis le req.body",req.body);
+  console.log("je suis le req.body", req.body);
   const project = { ...req.body };
-  
+
   ProjectsModel.findByIdAndUpdate(req.params.id, project, { new: true })
     .then((updatedProject) => {
       // console.log(updatedProject)

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import apiHandler from "../api/apiHandler";
 import "../styles/style.css";
-// import { Link } from "react-router-dom";
 
 const initialState = {
   picture: "",
@@ -18,10 +17,6 @@ class EditProjectForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
-
-  // fileSelectedHandler = (event) => {
-  //   this.setState({ ...this.state, picture: event.target.files[0] });
-  // };
 
   componentDidMount() {
     apiHandler
@@ -57,18 +52,16 @@ class EditProjectForm extends Component {
         description: this.state.description,
         type: this.state.type,
         tool: this.state.tool,
-      }) // formData use only to updload files
+      })
       .then((data) => {
         console.log(data);
-        this.props.history.push("/projects"); // ("/projects/{Id}")
+        this.props.history.push("/projects");
         this.setState();
       })
       .catch((error) => {
         console.log(error);
       });
   };
-
-  // soit j'envoi un object js  -> object avec state va directement au BackEND
 
   render() {
     console.log(this.state.picture);
@@ -142,11 +135,7 @@ class EditProjectForm extends Component {
           </div>
 
           <button type="submit" className="btn">
-            {/* <Link
-                  to={`projects/${project.id}`}
-                  > */}
             SUBMIT
-            {/* </Link> */}
           </button>
         </form>
       </section>

@@ -10,7 +10,7 @@ const projectsSchema = new Schema({
   title: {
     type: String,
     text: true,
-    required: true, // required is optional => Adds a required validator
+    required: true,
   },
 
   description: {
@@ -28,7 +28,6 @@ const projectsSchema = new Schema({
   tool: {
     type: String,
   },
-
 });
 
 const ProjectsModel = mongoose.model("Projects", projectsSchema);

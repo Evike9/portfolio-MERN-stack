@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import apiHandler from "../api/apiHandler";
 import "../styles/style.css";
-// import { Link } from "react-router-dom";
 
 const initialState = {
   picture: "",
@@ -35,8 +34,6 @@ class CreateProjectForm extends Component {
     const formData = new FormData();
 
     formData.append("picture", this.state.picture);
-    // formData is only use when file need to be uploaded >> fileSelectedHandler
-    // Object.keys(this.state).forEach(key=> formData.append(key, this.state[key]));
     formData.append("title", this.state.title);
     formData.append("type", this.state.type);
     formData.append("description", this.state.description);
@@ -124,11 +121,6 @@ class CreateProjectForm extends Component {
           </div>
 
           <button type="submit" className="btn">
-          {/* <Link
-                  to={"/projects"} */}
-      
-                {/* > */}
-                  {/* </Link>  */}
             SUBMIT
           </button>
         </form>
