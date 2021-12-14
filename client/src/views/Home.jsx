@@ -11,19 +11,22 @@ const Home = () => {
         <div className="skills">
           <h2>WELCOME TO MY PORTFOLIO</h2>
           <p>
-            Hello, I am a junior Web Dev with <br></br>a Designer and Delivery
-            Manager background.
-            <br></br>My main skills are:
+            Hello,
+            <br></br>I am a creative Web Developer with <br></br>a Graphic Designer <text>& </text>
+       Manager background.
+            <br></br>My main technical skills are:
           </p>
           <ul>
-            <li>Adobe Creative Suite</li>
+            <li>HTML5/CSS3</li>
+            <li>JavaScript/ReactJs</li>
+            <li>Adobe Photoshop</li>
+            <li>Adobe Illustrator</li>
+            <li>Adobe InDesign</li>
+            <li>Adobe AfterEffects</li>
             <li>Blender 3D</li>
-            <li>HTML5 and CSS3</li>
-            <li>JavaScript</li>
             <li>Team Management</li>
           </ul>
-          <br></br>
-          <p>Enjoy my designs and hire me!</p>
+          <p>Enjoy my designs and contact me</p>
           <p className="github">
             Go to my Github to check out this MERN project's code :&nbsp;
             <a href="https://github.com/Evike9/portfolio-MERN-stack">
